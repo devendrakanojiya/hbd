@@ -24,6 +24,8 @@
 <body>
 	<div id="mainDiv">
 		<div id="content">
+			<audio id="birthdayAudio" src="hbd.mp3" autoplay loop></audio>
+
 			<div id="code">
 				<span class="comments">/**</span><br />
 				<span class="space" /><span class="comments">* Special log entry for 19th September 🎂</span><br />
@@ -92,6 +94,31 @@
 			$("#code").typewriter();
 		}
 	</script>
+
+
+
+
+	<script>
+		window.addEventListener('DOMContentLoaded', function () {
+			const audio = document.getElementById("birthdayAudio");
+
+			// Try to play the audio after a brief delay
+			setTimeout(() => {
+				audio.play().catch((e) => {
+					console.log("Autoplay was prevented. Waiting for user interaction...");
+				});
+			}, 1000);
+		});
+
+		// Attempt to resume audio on any user interaction (fallback)
+		document.addEventListener("click", function () {
+			const audio = document.getElementById("birthdayAudio");
+			if (audio.paused) {
+				audio.play();
+			}
+		});
+	</script>
+
 </body>
 
 </html>
