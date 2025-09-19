@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Happy Birthday Mitali 🎂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="description" content="Wishing you laughter, happiness and lots of cake. Happy Birthday Mitali!">
+	<meta name="author" content="Your Friend">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Happy Birthday Mitali!" />
+	<meta property="og:description" content="Sending cheerful wishes on your special day 🎉" />
+
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" href="./cake.png" type="image/png" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/birthday.js"></script>
+	<script type="text/javascript" src="js/hbd.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space" /><span class="comments">* Special log entry for 19th September 🎂</span><br />
+				<span class="space" /><span class="comments">* Ahh 😃 it's our Granny's Birthday </span><br />
+				<span class="space" /><span class="comments">*/</span><br />
+				Friend granny = <span class="keyword">new</span> Friend(<span class="string">"Krystal"</span>);<br />
+				<span class="comments">// September 19th, the bell rang 👵🏼</span><br />
+				Date currentTime = <span class="keyword">new</span> Date(); <br />
+				SimpleDateFormat formatter = </br> <span class="keyword">new</span> SimpleDateFormat(<span
+					class="string">"yyyy-MM-dd HH:mm:ss"</span>);<br />
+				String dateString = formatter.format(currentTime);<br />
+				if( dateString.equals(<span class="string">"2025-09-19 00:00:00"</span>) ){</br>
+				granny.age ++;</br>
+				}</br>
+				<span class="comments">// My wishes will keep you in good spirits ☺️.</span><br />
+				<span class="keyword">new</span> Thread (){<br />
+				@Override </br>
+				<span class="comments">// less back pain</span><br />
+				while(true){</br>
+				<span class="comments">// luckiness,</span><br />
+				granny.fortune ++;</br>
+				<span class="comments">// happiness,</span><br />
+				granny.happiness ++;</br>
+				<span class="comments">// a lifetime supply of your favorite snacks.</span><br />
+				<span class="comments">// and everything you wish can be achieved.</span><br />
+				}.start()</br>
+				<span class="comments">// The last thing I wanna say, boring & ordinary is:</span><br />
+				System.out.println(<span class="string">"Happy Birthday, <b>Mitali!</b>"</span>);
+			</div>
+
+
+
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="birthdayMessage">
+
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<hr>
+			<p>Enjoy your day kid 😊</p>
+			</hr>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Sorry, your browser doesn't support this fun animation!";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 2000);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>
